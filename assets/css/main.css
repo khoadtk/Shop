@@ -14,7 +14,6 @@
     padding: 0;
     margin: 4px 0 0 0;
     display: flex;
-    z-index: 1;
 }
 
 .header__navbar--item {
@@ -50,7 +49,7 @@
 .header_navbar--user--menu {
     position: absolute;
     padding-left: 0;
-    top: calc(100% + 2px);
+    top: calc(100% + 4px);
     right: 0;
     width: 160px;
     background-color: var(--white--color);
@@ -59,6 +58,7 @@
     box-shadow: 0 1px 2px #e0e0e0;
     display: none;
     animation: showin ease-in 0.2s;
+    z-index: 3;
 }
 
 .header_navbar--user--menu::after {
@@ -169,6 +169,8 @@
     border-radius: 2px;
     display: none;
     animation: showin ease-in 0.4s;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    z-index: 1;
 }
 
 .header__qr::before {
@@ -222,6 +224,7 @@
     transform-origin: calc(100% - 32px) top;
     animation: headernotifygrow ease-in 0.2s;
     will-change: opacity, transform;
+    z-index: 3;
 }
 
 .header__notify::before {
@@ -521,7 +524,6 @@
     display: inline-block;
     cursor: pointer;
     padding: 0 8px;
-    z-index: 1;
 }
 
 .header__cart-icon {
@@ -554,6 +556,7 @@
     animation: showin ease-in 0.2s;
     cursor: none;
     cursor: default;
+    z-index: 2;
 }
 
 .header__cart--list::after {
@@ -604,6 +607,8 @@
 .header__cart--list-item {
     padding-left: 0;
     list-style: none;
+    max-height: 50vh;
+    overflow-y: auto;
 }
 
 .header__cart--item {
@@ -641,11 +646,11 @@
     font-weight: 500;
     color: var(--text--color);
     margin: 0;
-    flex-wrap: nowrap;
+    line-height: 2rem;
+    max-height: 4rem;
     overflow: hidden;
-    text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 1;
+    -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     text-align: left;
 }
@@ -770,6 +775,7 @@
     border-radius: 2px;
     display: none;
     animation: showin ease-in 0.2s;
+    z-index: 2;
 }
 
 .header__search--option::after {
@@ -835,6 +841,7 @@
     box-shadow: 0 1px 5px rgb(180, 179, 179);
     overflow: hidden;
     display: none;
+    z-index: 2;
 }
 
 .header__search--history--heading {
@@ -848,6 +855,7 @@
     padding-left: 0;
     list-style: none;
     margin: 6px 0 0;
+    z-index: 1;
 }
 
 .header__search--history--item {
@@ -951,6 +959,15 @@
     color: #555555;
     font-size: 1.4rem;
     margin-right: 15px;
+}
+
+.select-input {
+    position: relative;
+}
+
+.select-input__list {
+    position: absolute;
+    z-index: 1;
 }
 
 .home-filter__btn {
