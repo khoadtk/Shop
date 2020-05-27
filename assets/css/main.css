@@ -1064,8 +1064,6 @@
     -webkit-line-clamp: 2;
 }
 
-.home-product-item__box {}
-
 .home-product-item__box-sale {
     color: #ee4d2d;
     border: 1px solid #ee4d2d;
@@ -1248,8 +1246,6 @@
     list-style: none;
     padding-left: 0;
 }
-
-.footer-item {}
 
 .footer-item__link {
     text-decoration: none;

@@ -232,8 +232,6 @@ html {
     margin: 0 15px;
 }
 
-.pagination-item__icon {}
-
 .pagination-item__active .pagination-item__link {
     background-color: var(--primary--color);
     color: var(--white--color);
