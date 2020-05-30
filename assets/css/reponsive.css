@@ -37,6 +37,12 @@
         .app__container {
             margin-top: calc(var(--header--height) + var(--header-sort-bar-height));
         }
+        .app__content {
+            padding: 8px 4px;
+        }
+        .mobile-caterogy {
+            display: block;
+        }
     }
     /* tablet */
     
@@ -47,6 +53,11 @@
         .header__cart {
             width: 80px;
             text-align: right;
+        }
+        .header__sort-bar {
+            padding: 0 0;
+            /* width: 660px; */
+            justify-items: center;
         }
     }
     /* Mobile */
@@ -60,7 +71,7 @@
             text-align: right;
         }
         .app__container {
-            margin: 0 5px;
+            /* margin: 0 5px; */
         }
         .pagination-item {
             margin: 0;
