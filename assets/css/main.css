@@ -355,6 +355,55 @@
     text-align: center;
 }
 
+.header__sort-bar {
+    position: fixed;
+    top: var(--header--height);
+    left: 0;
+    right: 0;
+    height: var(--header-sort-bar-height);
+    background-color: var(--white--color);
+    display: flex;
+    margin: 0;
+    list-style: none;
+    padding-left: 0;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    display: none;
+}
+
+.header__sort-item {
+    flex: 1;
+}
+
+.header__sort-link {
+    text-decoration: none;
+    color: var(--text--color);
+    font-size: 1.4rem;
+    display: block;
+    height: 100%;
+    line-height: var(--header-sort-bar-height);
+    text-align: center;
+    position: relative;
+}
+
+.header__sort-item-active .header__sort-link {
+    color: var(--primary--color);
+}
+
+.header__sort-link::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 0;
+    height: 60%;
+    transform: translateY(-50%);
+    border-left: 1px solid #e5e5e5;
+}
+
+.header__sort-item:first-child .header__sort-link::before {
+    display: none;
+}
+
 
 /* Authen modal */
 
@@ -492,6 +541,7 @@
     height: var(--header-search--height);
     display: flex;
     align-items: center;
+    justify-content: space-between;
     margin: 0 8px;
 }
 
@@ -647,7 +697,7 @@
 }
 
 .header__cart--item--name {
-    width: 200px;
+    max-width: 200px;
     font-size: 1.4rem;
     font-weight: 500;
     color: var(--text--color);
@@ -1301,4 +1351,8 @@
 
 .footer__qr--download--img {
     width: calc(100% - 20px)
+}
+
+.footer__text {
+    margin: 50px auto;
 }
